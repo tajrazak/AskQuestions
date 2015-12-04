@@ -1,0 +1,52 @@
+<div id="signupStyle">
+  <div class="alert alert-success alert-dismissible fade in" role="alert" ng-show="success">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close" ng-click="close()">
+      <span aria-hidden="true">&times;</span>
+      <span class="sr-only">Close</span>
+    </button>
+    <strong>Successfully signed in!</strong> Please Login.
+  </div>
+  <div class="alert alert-danger alert-dismissible fade in" role="alert" ng-show="danger">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close" ng-click="close()">
+      <span aria-hidden="true">&times;</span>
+      <span class="sr-only">Close</span>
+    </button>
+    <strong>Email id is already exists!</strong> Please Use another email id.
+  </div>
+
+
+  <form name="signupForm" ng-submit="signupForm.$valid&&storeData(signupForm)" novalidate>
+    <div class="container">
+      <h1>Signup</h1><br>
+      <label>FirstName:</label>
+      <div ng-class="{'has-error':signupForm.Firstname.$error.required&&signupForm.Firstname.$dirty}" >
+        <input type="text" name="Firstname" ng-model="signup.Firstname" class="form-control" placeholder="FirstName" required/>
+      </div>
+      <br>
+      <label>LastName:</label>
+      <div ng-class="{'has-error':signupForm.Lastname.$error.required&&signupForm.Lastname.$dirty}" >
+        <input type="text" name="Lastname" ng-model="signup.Lastname" class="form-control" placeholder="LastName" required/>
+      </div>
+
+      <br>
+      <label>Email:</label>
+      <div ng-class="{'has-error':signupForm.Email.$error.required&&signupForm.Email.$dirty||signupForm.Email.$error.email}" >
+        <input type="email" name="Email" ng-model="signup.Email" class="form-control" placeholder="Email" required/>
+      </div>
+
+      <br>
+      <label>Password:</label>
+      <div ng-class="{'has-error':signupForm.Password.$error.required&&signupForm.Password.$dirty}" >
+        <input type="password" name="Password" ng-model="signup.Password"  class="form-control" placeholder="Password" required/>
+      </div>
+      <br>
+      <label>Date of birth</label>
+      <div ng-class="{'has-error':signupForm.dob.$invalid}">
+        <input type="text" class="form-control" ng-click="open($event)" name="dob"  uib-datepicker-popup="dd/MM/yyyy" ng-model="signup.dob" is-open="status.opened" min-date="minDate" max-date="maxDate"  close-text="Close" placeholder="dd/mm/yyy"  required/>
+      </div>
+      <br>
+      <button type="submit" class="btn btn-warning btn-lg">Register</button>
+      <!-- <button class="btn btn-primary btn-lg" style="margin-left:20px;">Register</button> -->
+    </div>
+  </form>
+</div>

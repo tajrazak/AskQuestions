@@ -1,0 +1,27 @@
+<div id="logPage">
+<form name="loginForm" ng-submit="loginForm.$valid&&submit()" novalidate>
+  <div class="container">
+    <h1>Please Login</h1>
+    <div ng-class="{'has-error':loginForm.username.$error.email}" >
+      <input type="email" name="username" ng-model="login.username" class="form-control" placeholder="Enter Email" required/>
+    </div>
+    <div ng-messages="loginForm.username.$error">
+      <span ng-if="loginForm.username.$dirty">
+        <span ng-message="required" style="color:red">email can't be blank</span>
+      </span>
+    </div>
+    &nbsp;
+    <input type="password" name="password" ng-model="login.password" class="form-control" placeholder="Password" required/>
+    <div ng-messages="loginForm.password.$error">
+      <span ng-if="loginForm.password.$dirty">
+        <span ng-message="required" style="color:red">password can't be blank</span>
+        <!-- <p ng-message=""></p> -->
+      </span>
+    </div>
+
+    <br>
+    <button type="submit" class="btn btn-warning btn-lg">Submit</button>
+    <!-- <button class="btn btn-primary btn-lg" style="margin-left:20px;">Register</button> -->
+  </div>
+</form>
+</div>

@@ -1,0 +1,41 @@
+<div>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="">WebSiteName</a>
+      </div>
+      <div>
+        <ul class="nav navbar-nav" ng-hide="beforeLogin">
+        
+          <!-- <li><a href="">Page 2</a></li>
+          <li><a href="">Page 3</a></li> -->
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a  ui-sref="firstPage.signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          <li><a  ui-sref="firstPage.login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+<div id="login">
+
+  <div class="row">
+    <div class="col-md-8">
+      <center>
+        <div>
+          <h1>Knowledge is having the right answer.</h1>
+          <h1>Intelligence is asking the right question.</h1>
+          <br>
+          <img src="download.jpg" id="thumb-image" class="animated infinite bounce"></img>
+        </div>
+      </center>
+    </div>
+    <div class="col-md-4">
+          <ui-view></ui-view>
+    </div>
+  </div>
+</div>
+</div>

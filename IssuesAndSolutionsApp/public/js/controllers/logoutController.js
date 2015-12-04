@@ -1,0 +1,11 @@
+subApp.controller('logoutCtrl',function($scope,serverCall,$state){
+  $scope.logout=function(){
+    console.log("logginout")
+    serverCall.logoutSession({},function(data){
+      if(data.success)
+      {
+        $state.go('firstPage.login');
+      }
+    })
+  }
+})
