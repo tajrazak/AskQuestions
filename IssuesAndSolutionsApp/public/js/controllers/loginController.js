@@ -1,4 +1,4 @@
-subApp.controller('loginCtrl',function($scope,$http,$location,$state,$rootScope,serverCall){
+angular.module('starter.controller').controller('loginCtrl',function($scope,$http,$location,$state,$rootScope,serverCall){
   $scope.login={};
   $scope.submit=function(){
 

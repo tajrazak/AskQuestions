@@ -1,4 +1,4 @@
-subApp.controller('bodyCtrl',function($rootScope,$state,$location,$timeout){
+angular.module('starter.controller').controller('bodyCtrl',function($rootScope,$state,$location,$timeout){
   $rootScope.$on('$stateChangeError',function(event, toState, toParams, fromState, fromParams, error){
     if(error=="loginrejection")
     {

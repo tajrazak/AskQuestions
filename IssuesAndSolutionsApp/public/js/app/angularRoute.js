@@ -1,4 +1,4 @@
-subApp.config(function($stateProvider,$urlRouterProvider){
+angular.module('starter.controller').config(function($stateProvider,$urlRouterProvider){
 
   $stateProvider
   .state('firstPage',{

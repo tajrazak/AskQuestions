@@ -1,4 +1,4 @@
-subApp.factory('serverCall',function($resource){
+angular.module('starter.controller').factory('serverCall',function($resource){
   return $resource('http://localhost:3000',{},{
     'login':{
       url:'/login',

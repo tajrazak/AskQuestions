@@ -1,2 +1,2 @@
-var app=angular.module('starter',['ui.router','starter.controller','ngMessages','ui.bootstrap','ngResource']);
-var subApp=angular.module('starter.controller',[]);
+angular.module('starter',['ui.router','starter.controller','ngMessages','ui.bootstrap','ngResource']);
+angular.module('starter.controller',[]);

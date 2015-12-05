@@ -1,4 +1,4 @@
-subApp.factory('sessionAvailCheck',function($http,$q){
+angular.module('starter.controller').factory('sessionAvailCheck',function($http,$q){
   var defered;
   return{
 

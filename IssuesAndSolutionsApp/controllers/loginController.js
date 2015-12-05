@@ -14,7 +14,9 @@ module.exports={
       {
         //req.session.cookie.maxAge=10000;
         req.session.user_email=req.body.username;
+        console.log(req.url)
         res.send({success:true});
+        //res.sendFile('/views/templates/home.html');
       }else{
         res.send({success:false});
       }

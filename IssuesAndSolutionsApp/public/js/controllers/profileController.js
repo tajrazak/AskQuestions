@@ -1,4 +1,4 @@
-subApp.controller('profileCtrl',function($document,$scope,$state,sessionAvailCheck){
+angular.module('starter.controller').controller('profileCtrl',function($document,$scope,$state,sessionAvailCheck){
 $document.ready(function() {
       var $btnSets = $('#responsive'),
       $btnLinks = $btnSets.find('a');

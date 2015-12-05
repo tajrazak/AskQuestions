@@ -1,4 +1,4 @@
-subApp.controller('signupCtrl',function($scope,$http,$document,serverCall){
+angular.module('starter.controller').controller('signupCtrl',function($scope,$http,$document,serverCall){
 
   $scope.signup={};
   $scope.success=false;

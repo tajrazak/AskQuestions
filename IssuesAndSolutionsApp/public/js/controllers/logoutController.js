@@ -1,4 +1,4 @@
-subApp.controller('logoutCtrl',function($scope,serverCall,$state){
+angular.module('starter.controller').controller('logoutCtrl',function($scope,serverCall,$state){
   $scope.logout=function(){
     console.log("logginout")
     serverCall.logoutSession({},function(data){

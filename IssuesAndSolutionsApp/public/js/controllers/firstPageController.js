@@ -1,4 +1,4 @@
-subApp.controller('firstPageCtrl',function($scope,$state,$location,sessionAvailCheck){
+angular.module('starter.controller').controller('firstPageCtrl',function($scope,$state,$location,sessionAvailCheck){
   var res=sessionAvailCheck.checkSessionBeforLogin();
   res.then(function(){
     $state.go('firstPage.login')
