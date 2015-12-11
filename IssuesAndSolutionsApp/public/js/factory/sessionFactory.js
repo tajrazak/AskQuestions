@@ -1,9 +1,9 @@
 angular.module('starter.controller').factory('sessionAvailCheck',function($http,$q){
-  var defered;
+
   return{
 
     check:function(){
-      defered=$q.defer();
+      var defered=$q.defer();
       //console.log("triggered")
 
       $http.get('/checkSession').success(function(data){
@@ -20,7 +20,7 @@ angular.module('starter.controller').factory('sessionAvailCheck',function($http,
       return defered.promise;
     },
     checkSessionBeforLogin:function(){
-      defered=$q.defer();
+      var defered=$q.defer();
       console.log("triggered")
 
       $http.get('/checkSession').success(function(data){
